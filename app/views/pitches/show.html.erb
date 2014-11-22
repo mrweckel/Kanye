@@ -14,9 +14,10 @@
       <div id="progress_bg" class="small">
         <div id="progress" class style="width: 0.0%;"></div>
       </div>
-      <a href="/preorder/checkout" class="blue_button reserve">Cast Vote</a>
 
+<%= link_to 'Vote', pitch_vote_path(pitch_id: @pitch.id), method: :post, class: "btn btn-primary" %>
 
+<br>
       <%= link_to 'Create Comment', new_comment_path(pitch_id: @pitch.id) %>
 <%= link_to 'All Comments', comments_path(pitch_id: @pitch.id) %>
 <%= link_to 'Edit', edit_pitch_path %>

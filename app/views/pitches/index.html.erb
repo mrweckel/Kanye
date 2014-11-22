@@ -7,7 +7,7 @@
   <%= link_to 'Edit', [:edit, pitch] %>
   <%= link_to 'Delete', pitch, method: :delete%>
   <%= link_to 'Comments', comments_path(pitch_id: pitch.id)%>
-  <%= link_to 'Vote', votes_path(pitch_id: pitch.id), method: :post %>
+  <%= link_to 'Vote', pitch_vote_path(pitch_id: pitch.id), method: :post %>
   Vote Count: <%= pitch.votes.count %>
 
   <%= pitch.url%>

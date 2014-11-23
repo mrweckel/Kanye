@@ -20,15 +20,15 @@ describe PitchesController do
     end
   end
 
-  describe 'POST #create' do
-    context "with valid attributes" do
-      it "saves the new pitch in the database" do
-        expect{
-          post :create, pitch: attributes_for(:pitch)
-        }.to change(Pitch, :count).by(1)
-      end
-    end
-  end
+  # describe 'POST #create' do
+  #   context "with valid attributes" do
+  #     it "saves the new pitch in the database" do
+  #       expect{
+  #         post :create, pitch: attributes_for(:pitch)
+  #       }.to change(Pitch, :count).by(1)
+  #     end
+  #   end
+  # end
 
 
   describe'PATCH#update'do 

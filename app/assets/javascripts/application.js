@@ -16,20 +16,25 @@
 //= require_tree .
 $(document).ready(function() {
 
-$('.banner').hide();
-  
-  $(function() {
-    $('.banner').unslider();
-  });
 
-  $('.banner').unslider({
-    speed: 300,
+
+
+   $('.banner').unslider({
+    speed: 350,
     complete: function() {},
     keys: true,
     dots: true,
     fluid: true
   });
-  
+   var unslider = $('.banner').unslider(), 
+         data = unslider.data('unslider');
+    window.onload = function () {  data.move(0); }
+
+
+
+
+
+
   var submit_button = $('#submit_pre_upload_form');
   var video_upload = $('#video_upload');
   submit_button.click(function () {

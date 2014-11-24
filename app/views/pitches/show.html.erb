@@ -6,13 +6,13 @@
     </div>
     <div id="backing">
       <div class="progress">
-        <div class="progress-bar" style="width: 60%;"></div>
+        <div class="progress-bar" style="width: <%= @votes %>0%;"></div>
       </div>
       <ul>
         <p>Vote Count <%= @votes %> | 10 days left</p>
       </ul>
       <div id="progress_bg" class="small">
-        <div id="progress" class style="width: 0.0%;"></div>
+        <div id="progress" ></div>
       </div>
       <div id="vote_button">
 <%= link_to 'Vote', pitch_vote_path(pitch_id: @pitch.id), method: :post, class: "btn btn-primary" %>

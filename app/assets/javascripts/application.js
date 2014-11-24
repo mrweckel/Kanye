@@ -15,6 +15,9 @@
 
 //= require_tree .
 $(document).ready(function() {
+
+$('.banner').hide();
+  
   $(function() {
     $('.banner').unslider();
   });

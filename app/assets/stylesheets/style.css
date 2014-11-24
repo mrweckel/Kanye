@@ -1,7 +1,7 @@
 /* ==== Google font ==== */
 @import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Montserrat:700|Merriweather:400italic');
 
-#pitch-form{
+#pitch-form, #signup-form{
   background: white;
   padding: 20px;
   border-radius: 20px;
@@ -65,7 +65,7 @@ h3 a{
 /*logo*/
 .logo-div{
   margin: 10px 0 -50px 60px;
-  z-index: 99;
+  z-index: 1039;
 }
 
 #logo{

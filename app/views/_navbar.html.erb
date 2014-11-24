@@ -8,8 +8,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
-      <% if session[:user_id]== nil%>
         <li class="active"><%= link_to "Home", root_path %></li>
+      <% if session[:user_id]== nil%>
         <li> <%= link_to "Login", log_in_path  %></li>
         <li> <%= link_to "Sign Up", new_user_path %></li>
         <% end %>

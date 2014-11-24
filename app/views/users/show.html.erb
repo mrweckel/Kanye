@@ -1,8 +1,20 @@
-Welcome <%=  @user.username %>
-<br>
-<ul>
-	<li> <%= link_to "Delete Your Account", user_path(@user.id), method: :delete %></li>
-	<!-- <li> <%= link_to "User Profile", user_path(session[:user_id])  %></li> -->
-</ul>
-<%= render "pitches/iterate_pitches" %>
-
+<body class="bg-2">
+<div class="container">
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4">
+				<div id="pitch-form">
+					<h2> Welcome <%=  @user.username %></h2>
+					<br>
+					<ul>
+						<li> <%= link_to "Delete Your Account", user_path(@user.id), method: :delete %></li>
+						<!-- <li> <%= link_to "User Profile", user_path(session[:user_id])  %></li> -->
+					</ul>     
+					<%= link_to 'Back', pitches_path %>
+					<%= render "pitches/iterate_pitches" %>
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4"></div>
+		</div>
+	</div>
+</body>

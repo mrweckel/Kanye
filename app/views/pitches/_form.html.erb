@@ -1,11 +1,11 @@
 <%= form_for @pitch do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title %>
-
+<br>
 <%= f.label :url %>
 <%= f.text_field :url %>
 
 <%= f.hidden_field :user_id, value: @user%>
-
+<br>
 <%= f.submit %>
 <% end %>

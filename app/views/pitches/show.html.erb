@@ -1,3 +1,5 @@
+<body class="bg-2">
+<div id="pitch-form">
 <br>
 <center><h2><%= @pitch.title %></h2>
   <div class="wrapper clearfix">
@@ -5,6 +7,7 @@
       <iframe width="512" height="385" src=<%= @pitch.url %> frameborder="0" allowfullscreen></iframe>
     </div>
     <div id="backing">
+    <br><br><br><br>
       <div class="progress">
         <div class="progress-bar" style="width: <%= @votes %>0%;"></div>
       </div>
@@ -20,22 +23,27 @@
 <br>
 
     <div id="create_comment">
-      <%= link_to 'Create Comment', new_comment_path(pitch_id: @pitch.id) %>
+      <%= button_to 'Comment', new_comment_path(pitch_id: @pitch.id) %>
     </div>
 
-
+<div id="show_comment" style="display: none;">
+<%= form_for @comment_form do |f| %>
+<%= f.text_area :content %>
+<br>
+<%= f.hidden_field :pitch_id, value: @pitch.id%>
+<%= f.hidden_field :user_id, value: @user%>
+<br>
+<div id='comment-submit'><%= f.submit "Post" %></div>
+<% end %>
+</div>
 
 <div id="comment_list" align="center">
   <ul style="list-style: none">
     <% @comments.each do |comment|%>
       <li><%= comment.content %>
-          <%= link_to 'Edit', [:edit, comment]%>
-          <%= link_to 'Delete', comment, method: :delete %></li>
     <% end %>
   </ul>
 </div>
 </center>
-
-
-
-
+</div>
+ </body>

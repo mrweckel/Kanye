@@ -186,4 +186,7 @@ body.lt-ie9
   }
 }
 
+#show_comment{
+	display: none;
+}
 

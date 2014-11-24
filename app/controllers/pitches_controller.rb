@@ -4,9 +4,11 @@ class PitchesController < ApplicationController
   end
 
   def show
+    @user = session[:user_id]
     @pitch = Pitch.find(params[:id])
     @votes = @pitch.votes.count
     @comments = @pitch.comments
+    @comment_form = @pitch.comments.new
   end
 
   def new

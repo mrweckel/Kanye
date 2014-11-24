@@ -6,6 +6,8 @@
   padding: 20px;
   border-radius: 20px;
   border: 1px solid black;
+    background-image: url("images/swirl_pattern.png");
+  background-repeat: repeat;
 }
 
 h3 a{

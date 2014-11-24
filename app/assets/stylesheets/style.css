@@ -65,6 +65,7 @@ h3 a{
 /*logo*/
 .logo-div{
   margin: 10px 0 -50px 60px;
+  z-index: 99;
 }
 
 #logo{

@@ -12,9 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 $(document).ready(function() {
+  $(function() {
+    $('.banner').unslider();
+  });
+
+  $('.banner').unslider({
+    speed: 300,
+    complete: function() {},
+    keys: true,
+    dots: true,
+    fluid: true
+  });
+  
   var submit_button = $('#submit_pre_upload_form');
   var video_upload = $('#video_upload');
   submit_button.click(function () {
@@ -32,17 +44,7 @@ $(document).ready(function() {
     });
   });
 
-  $(function() {
-    $('.banner').unslider();
-  });
 
-  $('.banner').unslider({
-    speed: 500,
-    complete: function() {},
-    keys: true,
-    dots: true,
-    fluid: false
-  });
 
   $('body').scroll(function(){
     $('#logo').fadeTo("slow" , 0.5,

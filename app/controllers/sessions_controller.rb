@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
   end
 end
 
+# Don't leave commented out cruft on master
+
   # def create
   #   auth = request.env['omniauth.auth']
   #   user = User.find_or_initialize_by(uid: auth['uid'])

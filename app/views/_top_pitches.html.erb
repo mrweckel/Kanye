@@ -17,6 +17,11 @@
       <div class="col-xs-4 col-sm-4 col-md-4">
         <div class="team boxed-grey">
           <div class="inner">
+            <%#
+
+              This is what is known as a magic number e.g. 1.  Why 1?  Why not 2?  What if I migrate my database twice and clean it out by hand, then my first entry might not be 1.  This seems kinda scary to me...
+
+            %>
             <h3><%= link_to @pitches.find(1).title, pitch_path(@pitches.find(1)) %></h3>
             <iframe class="iframe-yt" width="300" height="169" src=<%= @pitches.find(1).url %> frameborder="0" allowfullscreen></iframe>
           </div>
@@ -25,6 +30,7 @@
       <div class="col-xs-4 col-sm-4 col-md-4">
         <div class="team boxed-grey">
           <div class="inner">
+            <%# methinks i see a theme I don't like very much.....%>
             <h3><%= link_to @pitches.find(2).title, pitch_path(@pitches.find(2)) %></h3>
             <iframe class="iframe-yt" width="300" height="169" src=<%= @pitches.find(2).url %> frameborder="0" allowfullscreen></iframe>
           </div>
@@ -33,6 +39,7 @@
       <div class="col-xs-4 col-sm-4 col-md-4">
         <div class="team boxed-grey">
           <div class="inner">
+            <%# methinks i see a theme I don't like very much.....%>
             <h3><%= link_to @pitches.find(3).title, pitch_path(@pitches.find(3)) %></h3>
             <iframe class="iframe-yt" width="300" height="169" src=<%= @pitches.find(3).url %> frameborder="0" allowfullscreen></iframe>
           </div>
@@ -59,6 +66,15 @@
       <div class="col-xs-4 col-sm-4 col-md-4">
           <div class="team boxed-grey">
             <div class="inner">
+              <%#
+
+                OK now I'm mad.  Not because you've hard coded your top pitches, but that you REPEATED the code.  Why not use .each?  At least then you wouldn't have had to copy and paste this idea 6 times
+
+              Over and above that, why are you doing find logic inside of the view?  Isn't that a concern of a controller?
+
+              Not happy with this file.
+
+              %>
                <h3><%= link_to @pitches.find(6).title, pitch_path(@pitches.find(6)) %></h3>
               <iframe class="iframe-yt" width="300" height="169" src=<%= @pitches.find(6).url %> frameborder="0" allowfullscreen></iframe>
             </div>

@@ -12,6 +12,7 @@
         <li><%= link_to "new pitch", new_pitch_path %></li>
         <li> <%= link_to "Login", log_in_path  %></li>
         <li> <%= link_to "Sign Up", new_user_path %></li>
+        <!-- heres's the sortof place where i sort of don't mind a helper....sssshhhh don't tell anyone -->
          <% if session[:user_id] %>
           <li> <%= link_to "Logout", log_out_path  %></li>
           <li> <%= link_to "User Profile", user_path(session[:user_id])  %></li>

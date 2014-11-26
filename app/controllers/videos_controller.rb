@@ -11,6 +11,7 @@ class VideosController < ApplicationController
     temp_params = { title: params[:title], description: params[:description], category: 'Education',
                     keywords: [] }
 
+    # Nice collaboration with other Gems
     if current_user
       youtube = YouTubeIt::OAuth2Client.new(client_access_token: current_user.token,
                                             dev_key: ENV['GOOGLE_DEV_KEY'])
@@ -22,6 +23,12 @@ class VideosController < ApplicationController
       render json: {error_type: 'Not authorized.', status: :unprocessable_entity}
     end
   end
+
+  # I don't see this method being used anywhere?  It's confusing to me that
+  # it's still in here and has a name that's so substantively similar to
+  # get_video_uid_url.  Is one use a bug? Is this a hand-written
+  # reimplementation of the get_video_uid_url?  Delete things if you don't need
+  # them.
 
   def get_video_uid
     video_uid = params[:id]

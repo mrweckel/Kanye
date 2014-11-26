@@ -2,7 +2,7 @@ Welcome <%=  @user.username %>
 <br>
 <ul>
 	<li> <%= link_to "Delete Your Account", user_path(@user.id), method: :delete %></li>
-	<!-- <li> <%= link_to "User Profile", user_path(session[:user_id])  %></li> -->
+	<!-- JUST DELETE IT: you have `git` <li> <%= link_to "User Profile", user_path(session[:user_id])  %></li> -->
 </ul>
 <%= render "pitches/iterate_pitches" %>
 

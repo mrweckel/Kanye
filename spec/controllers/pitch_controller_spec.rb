@@ -5,6 +5,9 @@ describe PitchesController do
   describe 'GET #index' do
     context 'with params[:pitch]' do
       it "renders at least 3 pitches on the index page" do
+        # Nope.  Creating the items you're going to use should be done with
+        # let() or let!().  Also factoryGirl can create multiple (see
+        # documentation)
         pitches = []
         3.times do
           pitches << FactoryGirl.create(:pitch)
@@ -32,6 +35,7 @@ describe PitchesController do
 
 
   describe'PATCH#update'do 
+    # Use let()
     before :each do
       @pitch = FactoryGirl.create(:pitch)
     end
@@ -40,6 +44,7 @@ describe PitchesController do
       it "locates the requested @pitch" do
         patch :update, id: @pitch, pitch: attributes_for(:pitch)
         expect(assigns(:pitch)).to eq(@pitch) 
+        # Trim all this trailing whitespace
       end
 
       it "changes @pitch's attributes" do 

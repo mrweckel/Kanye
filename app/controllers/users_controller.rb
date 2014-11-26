@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 	    end
   end
 
+  # delete...
+
 # def create
 #     auth = request.env["omniauth.auth"]
 #     if user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])

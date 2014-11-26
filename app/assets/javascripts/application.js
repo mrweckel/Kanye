@@ -14,6 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+/* Code doesn't belong in here.  It should be in files that are magically
+ * rolled in by the require_tree directive
+ *
+ */
 $(document).ready(function() {
   var submit_button = $('#submit_pre_upload_form');
   var video_upload = $('#video_upload');
@@ -51,6 +57,10 @@ $(document).ready(function() {
       });
     });
 
+    /* don't do this comment out stuff thing...so gross....do or do not, there
+     * is no try -- YODA (DO YOU IT YOU SPEAK?)
+     *
+     */
 
   // $("#create_comment").click(function(e){
   //   e.preventDefault();

@@ -2,6 +2,7 @@
         <button class="g-signin"
             data-scope="https://www.googleapis.com/auth/plus.login"
             data-requestvisibleactions="http://schemas.google.com/AddActivity"
+            <%# seems like this should be an ENV['variable'] sort of thing so that it's easy to change? %>
             data-clientId="913039781549-l8a4irfivsmmmvk53e76aepjpbqlp1ve.apps.googleusercontent.com"
             data-accesstype="offline"
             data-callback="onSignInCallback"
